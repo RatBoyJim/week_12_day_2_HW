@@ -2,7 +2,7 @@ package attractions;
 
 import people.Visitor;
 
-public abstract class Attraction  implements ITicketed{
+public abstract class Attraction {
     private String name;
     private int rating;
     private int visitCount;
@@ -26,12 +26,10 @@ public abstract class Attraction  implements ITicketed{
     }
 
 
-    @Override
     public double defaultPrice() {
         return 0;
     }
 
-    @Override
     public double priceFor(Visitor visitor) {
         return 0;
     }
