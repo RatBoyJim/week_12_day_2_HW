@@ -1,15 +1,22 @@
 package people;
 
+import attractions.Attraction;
+import behaviours.IReviewed;
+
+import java.util.ArrayList;
+
 public class Visitor {
 
     private int age;
     private double height;
     private double money;
+    private ArrayList<Attraction> visitedAttractions;
 
     public Visitor(int age, double height, double money) {
         this.age = age;
         this.height = height;
         this.money = money;
+        this.visitedAttractions = new ArrayList<Attraction>();
     }
 
     public int getAge() {
@@ -22,5 +29,13 @@ public class Visitor {
 
     public double getMoney() {
         return money;
+    }
+
+    public void addVisitedAttraction(Attraction attraction){
+        this.visitedAttractions.add(attraction);
+    }
+
+    public int getSizeOfVisitedAttractionsList() {
+        return this.visitedAttractions.size();
     }
 }
