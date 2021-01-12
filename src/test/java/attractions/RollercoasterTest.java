@@ -62,4 +62,5 @@ public class RollercoasterTest {
     public void setVisitorTooShortToRide() {
         assertEquals(false, rollerCoaster.isAllowedTo(visitorTooShort));
     }
+
 }
